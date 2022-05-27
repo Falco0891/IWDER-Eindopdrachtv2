@@ -1,0 +1,15 @@
+
+  .card {
+      padding: 0 30px;
+      color: white;
+  }
+
+  #card-p {
+      width: 30%;
+  }
+
+
+.btn:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+}

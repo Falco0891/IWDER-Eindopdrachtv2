@@ -1,0 +1,112 @@
+.kaart:hover .order {
+    visibility: visible;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--yellow);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    font-family: "CeraPRO";
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60%;
+  }
+
+#form {
+    max-width: 700px;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  #form .form-field {
+    display: flex;
+    margin: 0 0 1rem 0;
+  }
+
+  #form label, #form input {
+    width: 70%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-size: 1.1rem;
+  }
+
+  #form label {
+    text-align: right;
+    width: 30%;
+  }
+
+  #form input {
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+  
+.myBtn{
+    border: none;
+}
+
+@media only screen and (max-width: 700px)
+{
+    .modal {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        position: fixed;
+        z-index: 100000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        font-family: "CeraPRO";
+      }
+      
+      .modal-content {
+        background-color: white;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 90%;
+      }
+    
+    #form {
+        max-width: 700px;
+        padding: 2rem;
+        box-sizing: border-box;
+        margin-left: -40px;
+      }
+      
+      
+}

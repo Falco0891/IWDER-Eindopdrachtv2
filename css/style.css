@@ -1,0 +1,1675 @@
+.kaart{
+  border-radius: 5px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 210%;
+}
+
+
+h3 {
+  font-weight: 400;
+  font-size: 120%;
+  margin-top: 10px;
+  font-family: "CeraPRO";
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 250%;
+  transform: translateX(30%);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: "CeraPRO";
+}
+
+h5{
+  display: none;
+}
+
+.winkelwagen{
+  border: none;
+}
+
+.fa-cart-arrow-down{
+  font-size: 200%;
+}
+
+.img{
+  margin-bottom: 300px;
+}
+
+main{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 80px;
+  grid-row-gap: 30px;
+  padding: 0px 0px 80px 0px;
+}
+
+main > figure > img{
+  width: 100%;
+  transition: 0.2s all;
+}
+
+main > figure > img:hover{
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5    ;
+  background-color: black;
+}
+
+.filterwrapper {
+  max-width: 960px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+}
+
+.filterContainer button {
+  color: white;
+  font-size: 130%;
+  padding: 1rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  background-color: #788b2b;
+  transition: all 0.3s;
+  border-radius: 5px;
+  border: none;
+}
+
+.filterContainer button:hover {
+  background-color: #515e1d;
+}
+
+.filterContainer .activeFilter {
+  background-color: #515e1d;
+}
+
+.verborgen {
+  display: none;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3rem;
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+
+.FavorietKnop {
+  border: 0;
+  cursor: pointer;
+  font-size: 130%;
+}
+
+.FavorietKnop:hover {
+  filter: brightness(1.3);
+}
+
+@media only screen and (max-width: 1110px) {
+  h3{
+      font-size: 15px;
+  }
+
+  header > h1 {
+      font-size: 200%;
+  }
+
+}
+
+
+@media only screen and (max-width: 700px) {
+  html, body
+  {
+      width: 100% !important;
+      margin: 0px !important;
+      padding: 0px !important;
+      overflow-x: hidden; 
+  }
+
+  main, footer {
+      grid-template-columns: 1fr;
+  }
+
+  header > h1 {
+      top: 40%;
+      font-size: 200%;
+  }
+
+  h3{
+      font-size: 30px;
+  }
+
+  h4 {
+      font-weight: 400;
+      font-size: 250%;
+      transform: translateX(30%);
+      margin-top: 20px;
+  }
+
+  .filterwrapper {
+      max-width: 90%;
+      margin: 30px auto;
+      display:block;
+      justify-content: center;
+  }
+
+  .filterContainer {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      gap:1rem;
+      margin-bottom: 3rem;
+  }
+
+  .filterButton {
+  width: 130px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+
+  main, footer {
+      grid-template-columns: 1fr;
+  }
+
+  header > h1 {
+      top: 40%;
+      font-size: 170%;
+  }
+
+  h3{
+      font-size: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes scroll{
+  0%{
+    transform: translateX(0)
+  }
+  100%{
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider{
+  height: 120px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.slider .slide-track{
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide{
+  margin-top: 20px;
+  padding-bottom: 20px;
+  height: 80px;
+  width: 400px;
+}
+
+
+
+
+
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color .4s ease-in-out;
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 62px;
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px 0 100px;
+}
+
+header.scroll {
+  background-color: rgba(241, 60, 33, 0.61);
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav a {
+  font-family: 'CeraPRO', sans-serif;
+  text-decoration: none;
+  margin-right: 22px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+#hamburger-menu-button{
+  display: none;
+}
+
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #000000, #000000); 
+  background-color: rgba(241, 60, 33, 0.61);
+  overflow-y: hidden;
+  transition: 0.5s;
+  font-family: 'CeraPRO', sans-serif;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.logo {
+  height: 32px;
+}
+
+header.scroll {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
+.container {
+  display: none;
+  cursor: pointer;
+  
+}
+
+#main-section {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0) 100%), url(../images/logo/mgs2background.png) 0 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+
+
+
+.fal {
+  color: white;
+  font-size: 50px;
+}
+
+.chevron{
+  position: absolute;
+  left: 100px;
+  bottom: 20%;
+}
+
+.slick-next {
+  display: none;
+  width: 500px;
+}
+
+#second-section {
+  background-color: #f13c21;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+}
+
+.annekeclass{
+  background-image: url(../images/metalgearrex.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.container-align-left {
+  padding: 30px 0 30px 100px;
+}
+
+#second-section h2 {
+  font-family: 'CeraPRO', sans-serif;
+  line-height: 1.3em;
+  font-size: 60px;
+  color: #FFFFFF;
+  margin: 0 0 23px 0;
+}
+
+#second-section p {
+  font-family: 'CeraPRO-Light', sans-serif;
+  padding: 0px 0px 23px;
+  line-height: 1.8em;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+#second-section .link-to {
+  font-family: 'CeraPRO-medium', sans-serif;
+  text-decoration-color: #FFFFFF;
+  text-decoration: underline;
+  line-height: 1.8em;
+  font-size: 30px;
+  color: #FFFFFF;
+  padding: 0px;
+}
+
+#fourth-section {
+  height: 900px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "left right";
+}
+
+#fourth-section .grid-left {
+  padding: 50px 50px 0px 100px;
+  background-color: white;
+  grid-area: left;
+}
+
+#fourth-section h2 {
+  margin-top: 0;
+  color: #FFFFFF;
+  font-size: 60px;
+  font-family: "CeraPRO";
+}
+
+#fourth-section p {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 1.8em;
+  font-family: "CeraPRO";
+}
+
+#fourth-section .grid-right {
+  background-image: url(../images/boeken.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: right;
+  width: 50vw;
+}
+
+#footer-top {
+  display: grid;
+  height: 277px;
+  width: 100vw;
+  background-color: #f13c21;
+}
+
+#footer-top p {
+  text-align: center;
+  font-size: 36px;
+  color: #FFFFFF;
+  font-family: "CeraPRO-medium";
+}
+
+h6{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-family: "CeraPRO-medium";
+}
+
+.button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  height: 40px;
+  border: 3px solid black;
+  border-radius: 6px;
+  font-size: 20px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: 'metal-gear-solid-2-regular', sans-serif;
+  text-decoration: none;
+  padding: 7px 25px;
+}
+
+.grid-center {
+  align-self: center;
+  justify-content: center;
+  display: grid;
+}
+
+#footer-logo-showcase {
+  height: 170px;
+}
+
+.footer-slide {
+  padding-top: 32.5px;
+}
+
+.footer-slide img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 105px;
+}
+
+footer {
+  background-color: #f13c21;
+  height: 280px;
+  width: 100vw;
+}
+
+footer p {
+  font-size: 15px;
+  font-family: "CeraPRO";
+  line-height: 1.6em;
+  color: #FFFFFF;
+  margin-bottom: 0px;
+}
+
+#footer-content {
+  height: 280px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "left middle right";
+}
+
+.footer-left {
+  margin: auto;
+  grid-area: left;
+}
+
+.footer-middle {
+  margin: auto;
+  grid-area: middle;
+}
+
+.footer-right {
+  margin: auto;
+  grid-area: right;
+}
+
+.footer-right a {
+  line-height: 1.6em;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "CeraPRO";
+}
+
+.description-slide {
+  background-color: #DDDDDD;
+  padding: 90px 0px 90px 0px;
+  font-size: 40px;
+  font-family: "CeraPRO-Light";
+  text-align: center;
+}
+
+.slick-dots {
+  background-color: #DDDDDD;
+}
+
+
+
+#partner-worden-header-tekst {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "left right";
+  display: grid;
+  height: 565px;
+  width: 100vw;
+}
+
+#partner-worden-header-tekst .grid-left {
+  background-color: white;
+  display: flex;
+  grid-area: left;
+}
+
+#partner-worden-header-tekst .grid-left h1 {
+  line-height: 1.3em;
+  margin: auto;
+  font-family: "CeraPRO";
+  font-size: 90px;
+  color: #FFFFFF;
+}
+
+#partner-worden-header-tekst .grid-right {
+  grid-area: right;
+  background-image: url(../images/download.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#partner-worden-list {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "left right"
+    "bottom bottom";
+  display: grid;
+  height: 750px;
+  width: 100vw;
+}
+
+#partner-worden-list .grid-left {
+  padding: 50px 50px 0px 100px;
+  line-height: 1.8em;
+  font-family: "CeraPRO-Light";
+  font-size: 23px;
+  color: #000000;
+  grid-area: left;
+}
+
+#partner-worden-list .grid-right {
+  padding: 50px 100px 0px 50px;
+  grid-area: right;
+  line-height: 1.8em;
+  font-family: "CeraPRO-medium";
+  font-size: 28px;
+  color: white;
+  display: flex;
+}
+
+#partner-worden-list h2 {
+  font-family: "CeraPRO";
+  margin: 0;
+  color: white;
+  padding: 20px 0px 50px 100px;
+  font-size: 90px;
+  grid-area: bottom;
+}
+
+#partner-worden-contact {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "left left right right right";
+  height: 100vh;
+  width: 100vw;
+  padding-top: 70px;
+  background: linear-gradient(to right, #f13c21, #504a88); 
+  color: white;
+}
+
+#partner-worden-contact .grid-left {
+  grid-area: left;
+}
+
+#partner-worden-contact .grid-left h2 {
+  font-family: "CeraPRO";
+  margin: 0;
+  line-height: 1em;
+  color: #FFFFFF;
+  padding: 50px 0px 20px 100px;
+  font-size: 90px;
+  grid-area: bottom;
+}
+
+#partner-worden-contact .grid-left h3 {
+  font-family: "CeraPRO";
+  margin: 0;
+  line-height: 1em;
+  color: #FFFFFF;
+  padding: 0px 0px 20px 100px;
+  font-size: 30px;
+  grid-area: bottom;
+}
+
+#partner-worden-contact .grid-left p {
+  font-family: "CeraPRO-Light";
+  margin: 0;
+  line-height: 1.2em;
+  color: #FFFFFF;
+  padding: 0px 100px 0px 100px;
+  font-size: 20px;
+  grid-area: bottom;
+}
+
+#partner-worden-contact .grid-right {
+  font-family: "CeraPRO-Light";
+  display: grid;
+  grid-area: right;
+  
+}
+
+#partner-worden-contact form {
+  margin: auto;
+  padding: 0px 100px 0px 100px;
+}
+
+#partner-worden-contact input[type=text], input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#partner-worden-contact input[type=submit] {
+  width: 100px;
+  background-color: #f13c21;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#partner-worden-contact input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+#recente-main-section {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0) 100%), url(../images/recent-background.png) 0 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+
+#recente-main-section h1 {
+  align-self: center;
+  line-height: 1.3em;
+  font-family: 'metal-gear-solid-2-regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 4vw;
+  color: black;
+  margin: 0;
+  padding-left: 100px;
+}
+
+.outer-recent-verschenen1 {
+margin-bottom: 50px;
+}
+
+#winkelpagina-main-section {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0) 100%), url(../images/winkelpagina-background.png) 0 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+
+#winkelpagina-main-section h1 {
+  align-self: center;
+  line-height: 1.3em;
+  font-family: 'metal-gear-solid-2-regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 4vw;
+  color: #96ae34;
+  margin: 0;
+  padding-left: 100px;
+}
+
+.button-winkelpagina {
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  height: 40px;
+  border: 3px solid #96ae34;
+  border-radius: 6px;
+  font-size: 20px;
+  color: #96ae34;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: 'metal-gear-solid-2-regular', sans-serif;
+  text-decoration: none;
+  padding: 7px 25px;
+}
+
+
+.outer-recent-verschenen1 {
+margin-bottom: 50px;
+}
+
+
+.boek {
+  width: 100%;
+  height: 29vw;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.titel {
+  font-family: "CeraPRO";
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  margin-top: -5px;
+}
+
+#recent-verschenen {
+  padding-top: 50px;
+  display: flex;
+}
+
+.recent-verschenen1 {
+  padding-top: 50px;
+  display: flex;
+}
+
+#recent-verschenen2 {
+  padding-top: 50px;
+  display: flex;
+}
+
+
+.container-1{
+  max-width: 20vw;
+  margin-left: 7vw;
+  background-color: #80b4c1;
+  border-radius: 6px;
+}
+
+.container-2 {
+  max-width: 20vw;
+  margin-left: 2vw;
+  background-color: #80b4c1;
+  border-radius: 6px;
+}
+
+.container-3{
+  max-width: 20vw;
+  margin-left: 2vw;
+  background-color: #80b4c1;
+  border-radius: 6px;
+}
+
+.container-4 {
+  max-width: 20vw;
+  margin-left: 2vw;
+  background-color: #80b4c1;
+  border-radius: 6px;
+}
+
+
+
+#recente-secondary-section {
+  background: url(../images/recent-background-klein2.png) 0 0;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: 70px;
+  justify-content: center;
+}
+
+#recente-secondary-section h1 {
+  line-height: 1.3em;
+  font-family: 'CeraPRO', sans-serif;
+  font-size: 40px;
+  color: black;
+  margin: 0;
+  align-self: center;
+
+}
+
+@font-face {
+  font-family: CeraPRO;
+  src: url(../fonts/CeraPRO.otf);
+}
+
+@font-face {
+  font-family: CeraPRO-Medium;
+  src: url(../fonts/CeraPRO-Medium.otf);
+}
+
+@font-face {
+  font-family: CeraPRO-Light;
+  src: url(../fonts/CeraPRO-Light.otf);
+}
+
+
+@media only screen and (max-width: 1334px) {
+    #partner-worden-contact .grid-left h2 {
+    font-family: "CeraPRO";
+    margin: 0;
+    line-height: 1em;
+    color: #FFFFFF;
+    padding: 50px 0px 20px 100px;
+    font-size: 70px;
+    grid-area: bottom;
+  }
+  
+  #partner-worden-contact .grid-left h3 {
+    font-family: "CeraPRO";
+    margin: 0;
+    line-height: 1em;
+    color: #FFFFFF;
+    padding: 0px 0px 20px 100px;
+    font-size: 15px;
+    grid-area: bottom;
+  }
+  
+}
+
+@media only screen and (max-width: 884px) {
+  #second-section {
+    background-color: #f13c21;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  footer p {
+    font-size: 12px;
+    font-family: "CeraPRO";
+    line-height: 1.6em;
+    color: #FFFFFF;
+  }
+  
+  .footer-right a {
+    line-height: 40px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: "CeraPRO";
+  }
+
+  #partner-worden-contact .grid-left h2 {
+    font-family: "CeraPRO";
+    margin: 0;
+    line-height: 1em;
+    color: #FFFFFF;
+    padding: 50px 0px 20px 100px;
+    font-size: 50px;
+    grid-area: bottom;
+  }
+  
+  #partner-worden-contact .grid-left h3 {
+    font-family: "CeraPRO";
+    margin: 0;
+    line-height: 1em;
+    color: #FFFFFF;
+    padding: 0px 0px 20px 100px;
+    font-size: 15px;
+    grid-area: bottom;
+
+}
+
+}
+
+@media only screen and (max-width: 755px) {
+  nav li {
+    list-style: none;
+    display: none;
+  }
+  
+  #hamburger-menu-button{
+    display: inline-block;
+  }
+
+  span{
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-left: 30vw;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color .4s ease-in-out;
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 62px;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 0 100px;
+  }
+
+  footer p {
+    font-size: 10px;
+    font-family: "CeraPRO";
+    line-height: 1.6em;
+    color: #FFFFFF;
+  }
+
+  #partner-worden-contact .grid-left h2 {
+    font-family: "CeraPRO";
+    margin: 0;
+    line-height: 1em;
+    color: #FFFFFF;
+    padding: 50px 0px 20px 100px;
+    font-size: 40px;
+    grid-area: bottom;
+  }
+  
+  #partner-worden-contact .grid-left h3 {
+    font-family: "CeraPRO";
+    margin: 0;
+    line-height: 1em;
+    color: #FFFFFF;
+    padding: 0px 0px 20px 100px;
+    font-size: 15px;
+    grid-area: bottom;
+  }
+  
+} 
+
+@media only screen and (max-width: 680px) {
+  #second-section h2 {
+    font-family: 'CeraPRO', sans-serif;
+    line-height: 1.3em;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin: 0 0 23px 0;
+  }
+
+  .container-align-left {
+    padding: 30px 0 30px 60px;
+  }
+  
+  #second-section {
+    background-color: #f13c21;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  .footer-left {
+    margin-left: 30px;
+    margin-top: 35px;
+    grid-area: left;
+  }
+  
+  .footer-middle {
+    margin-top: 50px;
+    margin-left: 25px;
+    grid-area: middle;
+  }
+
+  .footer-right {
+    margin: auto;
+    grid-area: right;
+    display: none;
+  }
+
+  #footer-content {
+    height: 170px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "left middle right";
+  }
+  
+ 
+  footer {
+    background-color: #f13c21;
+    height: 170px;
+    width: 100vw;
+  }
+  
+ 
+  footer {
+    background-color: #f13c21;
+    height: 170px;
+    width: 100vw;
+  }
+
+  #partner-worden-contact .grid-left h2 {
+    font-family: "CeraPRO";
+    margin: 0;
+    line-height: 1em;
+    color: #FFFFFF;
+    padding: 50px 0px 20px 100px;
+    font-size: 40px;
+    grid-area: bottom;
+    display: none;
+  }
+  
+  #partner-worden-contact .grid-left h3 {
+    font-family: "CeraPRO";
+    margin: 0;
+    line-height: 1em;
+    color: #FFFFFF;
+    padding: 0px 0px 20px 100px;
+    font-size: 15px;
+    grid-area: bottom;
+    display: none;
+  }
+
+  #partner-worden-contact form {
+    margin: auto;
+    padding: 0px 100px 0px 100px;
+  }
+
+  #partner-worden-header-tekst {
+    display: none;
+    height: 565px;
+    width: 100vw;
+  }
+  
+  #partner-worden-header-tekst .grid-right {
+    background-image: url(../images/download.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #partner-worden-list {
+    display: none;
+    height: 750px;
+    width: 100vw;
+  }
+  
+  #partner-worden-contact {
+    display: inline-flex;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 70px;
+    background: linear-gradient(to right, #f13c21, #504a88); 
+    color: white;
+    position: fixed;
+  }
+  
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  nav li {
+    list-style: none;
+    display: none;
+  }
+  
+  #hamburger-menu-button{
+    display: inline-block;
+  }
+
+  span{
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-left: 30vw;
+  }
+
+  #recente-main-section h1 {
+    align-self: center;
+    line-height: 1.3em;
+    font-family: 'CeraPRO', sans-serif;
+    font-size: 40px;
+    color: #FFFFFF;
+    margin: 0;
+    padding-left: 100px;
+  }
+
+} 
+
+@media only screen and (max-width: 426px) {
+  body{
+    width: 100%;
+  }
+
+  header {
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color .4s ease-in-out;
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 62px;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0px 0 10px;
+  }
+  
+  nav li {
+    list-style: none;
+    display: none;
+  }
+
+
+  #hamburger-menu-button{
+    display: inline-block;
+  }
+  
+  span{
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-left: 40vw;
+  }
+
+  .container {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 37vw;  
+  }
+  
+  .logo {
+    height: 30px;
+  }
+  
+  header.scroll {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .chevron{
+    position: absolute;
+    left: 25px;
+    bottom: 10%;
+  }
+
+  #main-section {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0) 100%), url(../images/logo/mgs2background3.png) 0 0;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-repeat:no-repeat;
+}
+  
+  #recente-main-section{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0) 100%), url(../images/recent-backgroundkopie.png) 0 0;
+  }
+
+  #recente-main-section h1{
+    margin-left: -50px!important;
+    font-size: 20px!important;
+  }
+
+  #main-section h1 {
+    align-self: center;
+    line-height: 1.3em;
+    font-family: 'CeraPRO', sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin: 0;
+    padding-left: 90px;
+  }
+
+  .container-align-left {
+    padding: 0px 0 30px 15px;
+  }
+
+  #second-section {
+    background-color: #f13c21;
+  }
+
+  #second-section h2 {
+    font-family: 'CeraPRO', sans-serif;
+    line-height: 1.3em;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  #second-section p {
+    font-family: 'CeraPRO-Light', sans-serif;
+    padding: 0px 0px 23px;
+    line-height: 1.8em;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0;
+    width: 90vw;
+  }
+
+  .annekeclass{
+    background-image: url(../images/metalgearrex.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: none;
+  }
+
+
+
+ #footer-content {
+    height: 200px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "left middle";
+  }
+  
+  footer {
+    background-color: #f13c21;
+    height: 200px;
+    width: 100vw;
+  }
+
+.footer-left {
+  margin-left: 10px;
+  margin-top: 35px;
+  grid-area: left;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.footer-middle {
+  margin-top: 25px;
+  margin-left: 5px;
+  grid-area: middle;
+}
+
+.footer-right {
+  margin: auto;
+  grid-area: right;
+  display: none;
+}
+
+.footer-right a {
+  line-height: 40px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "CeraPRO";
+}
+
+.description-slide {
+  background-color: #DDDDDD;
+  padding: 90px 0px 90px 0px;
+  font-size: 40px;
+  font-family: "CeraPRO-Light";
+  text-align: center;
+}
+
+.slick-dots {
+  background-color: #DDDDDD;
+}
+
+#partner-worden-header-tekst {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "left right";
+  display: grid;
+  height: 565px;
+  width: 100vw;
+}
+
+#partner-worden-header-tekst .grid-left {
+  background-color: white;
+  display: flex;
+  grid-area: left;
+}
+
+#partner-worden-header-tekst .grid-left h1 {
+  line-height: 1.3em;
+  margin: auto;
+  font-family: "CeraPRO";
+  font-size: 90px;
+  color: #FFFFFF;
+}
+
+#partner-worden-header-tekst .grid-right {
+  grid-area: right;
+  background-image: url(../images/download.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#partner-worden-list {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "left right"
+    "bottom bottom";
+  display: grid;
+  height: 750px;
+  width: 100vw;
+}
+
+#partner-worden-list .grid-left {
+  padding: 50px 50px 0px 100px;
+  line-height: 1.8em;
+  font-family: "CeraPRO-Light";
+  font-size: 23px;
+  color: #000000;
+  grid-area: left;
+}
+
+#partner-worden-list .grid-right {
+  padding: 50px 100px 0px 50px;
+  grid-area: right;
+  line-height: 1.8em;
+  font-family: "CeraPRO-medium";
+  font-size: 28px;
+  color: white;
+  display: flex;
+}
+
+#partner-worden-list h2 {
+  font-family: "CeraPRO";
+  margin: 0;
+  color: white;
+  padding: 20px 0px 50px 100px;
+  font-size: 90px;
+  grid-area: bottom;
+}
+
+#partner-worden-contact {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "left left right right right";
+  height: 100vh;
+  width: 100vw;
+  padding-top: 70px;
+  background: linear-gradient(to right, #f13c21, #504a88); 
+  color: white;
+}
+
+#partner-worden-contact .grid-left {
+  grid-area: left;
+}
+
+#partner-worden-contact .grid-left h2 {
+  font-family: "CeraPRO";
+  margin: 0;
+  line-height: 1em;
+  color: #FFFFFF;
+  padding: 10px 0px 10px 40px;
+  font-size: 30px;
+  grid-area: bottom;
+  display: block;
+}
+
+#partner-worden-contact .grid-left h3 {
+  font-family: "CeraPRO";
+  margin: 0;
+  line-height: 1em;
+  color: #FFFFFF;
+  padding: 0px 0px 10px 40px;
+  font-size: 15px;
+  grid-area: bottom;
+  width: 300px;
+  display: block;
+}
+
+
+#partner-worden-contact .grid-left p {
+  font-family: "CeraPRO-Light";
+  margin: 0;
+  line-height: 1.2em;
+  color: #FFFFFF;
+  padding: 0px 100px 0px 100px;
+  font-size: 20px;
+  grid-area: bottom;
+}
+
+#partner-worden-contact .grid-right {
+  font-family: "CeraPRO-Light";
+  display: grid;
+  grid-area: right;
+  margin-top: 100px;
+  margin-left: -200px;
+  
+}
+
+#partner-worden-contact form {
+  margin: auto;
+  padding: 0px 100px 0px 100px;
+}
+
+#partner-worden-contact input[type=text], input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#partner-worden-contact input[type=submit] {
+  width: 100px;
+  background-color: #f13c21;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#partner-worden-contact input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#recente-main-section h1 {
+  align-self: center;
+  line-height: 1.3em;
+  font-family: 'CeraPRO', sans-serif;
+  font-size: 30px;
+  color: #FFFFFF;
+  margin: 0;
+  padding-left: 100px;
+}
+
+.boek {
+  width: 100%;
+  height: 59vw;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.titel {
+  font-family: "CeraPRO";
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+  margin-top: -5px;
+}
+
+#recent-verschenen {
+  padding-top: 25px;
+  margin-bottom: 141vw;
+  display: flex;
+}
+
+
+.recent-verschenen1 {
+  padding-top: 25px;
+  margin-bottom: 132vw;
+  display: flex;
+}
+
+#recent-verschenen2 {
+  padding-top: 50px;
+  margin-bottom: 148vw;
+  display: flex;
+}
+
+.container-1{
+  max-width: 43vw;
+  max-height: 400px;
+  margin-left: 4.5vw;
+  background-color: #80b4c1;
+  border-radius: 6px;
+  position: absolute;
+  z-index: -1;
+}
+
+.container-2 {
+  max-width: 43vw;
+  margin-left: 52vw;
+  background-color: #80b4c1;
+  border-radius: 6px;
+  position: absolute;
+  z-index: -2;
+}
+
+.container-3{
+  max-width: 43vw;
+  margin-left: 4.5vw;
+  margin-top: 73vw;
+  background-color: #80b4c1;
+  border-radius: 6px;
+  position: absolute;
+  z-index: -3;
+}
+
+.container-4 {
+  max-width: 43vw;
+  margin-left: 52vw;
+  margin-top: 73vw;
+  background-color: #80b4c1;
+  border-radius: 6px;
+  position: absolute;
+  z-index: -4;
+}
+
+#recente-secondary-section {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0) 100%), url(../images/recent-background-klein.jpg) 0 0;
+  height: 25vh;
+  width: 100vw;
+  margin-top: 0;
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+
+#recente-secondary-section h1 {
+  align-self: center;
+  line-height: 1.3em;
+  font-family: 'CeraPRO', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+  padding-left: 35px;
+}
+
+
+} 
